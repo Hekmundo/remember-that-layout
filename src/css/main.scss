@@ -1,7 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* table of contents
+
+1. variables
+
+2. global styles
+
+3. Mobile
+  3.1 mobile navbar
+  3.2 mobile navbar open
+  3.3 mobile hero
+  3.4 mobile features
+  3.5 mobile testimonials
+  3.6 mobile contact
+
+4. Desktop
+  4.1 desktop navbar
+  4.2 desktop hero
+  4.3 desktop features
+  4.4 desktop testimonials
+  4.5 desktop contact
+
+5. extra features
+
+*/
+
 /* ================
-    variables
+  1. variables
    ================ */
 
 :root {
@@ -9,7 +34,7 @@
 }
 
 /* ================
-    global styles
+  2. global styles
    ================ */
 
 body {
@@ -37,7 +62,7 @@ h2 {
 }
 
 /* ================
-    mobile navbar
+  3.1 mobile navbar
    ================ */
 
 .navbar {
@@ -70,7 +95,52 @@ h2 {
 }
 
 /* ================
-    mobile hero
+  3.2 mobile navbar open
+   ================ */
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: #20272E;
+  height: 100vh;
+  padding: 1em;
+
+  ul.primary-nav {
+    margin-top: 5em;
+  }
+
+  li {
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: block; // this is needed to change padding and margin on <a> tags
+      padding: .5em;
+      font-size: 1.3em;
+      text-align: right;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+}
+
+/* ================
+  3.3 mobile hero
    ================ */
 
 .hero {
@@ -120,7 +190,7 @@ h2 {
 }           
 
 /* ================
-   mobile features
+  3.4 mobile features
    ================ */
 
 section.features-section {
@@ -159,7 +229,7 @@ ul.features-list {
 }
 
 /* ================
-  mobile testimonials
+  3.5 mobile testimonials
    ================ */
 
 .testimonials-section {
@@ -185,7 +255,7 @@ ul.features-list {
 }
 
 /* ================
-   mobile contact
+  3.6 mobile contact
    ================ */
 
 label {
@@ -223,52 +293,7 @@ iframe {
 }
 
 /* ================
-  mobile navbar open
-   ================ */
-
-nav.menu-btn {
-  display: block;
-}
-
-nav {
-  position: fixed;
-  z-index: 999;
-  width: 66%;
-  right: 0;
-  top: 0;
-  background: #20272E;
-  height: 100vh;
-  padding: 1em;
-
-  ul.primary-nav {
-    margin-top: 5em;
-  }
-
-  li {
-
-    a {
-      color: white;
-      text-decoration: none;
-      display: block; // this is needed to change padding and margin on <a> tags
-      padding: .5em;
-      font-size: 1.3em;
-      text-align: right;
-
-      &:hover {
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-.mobile-menu-exit {
-  float: right;
-  margin: .5em;
-  cursor: pointer;
-}
-
-/* ================
-    desktop navbar
+  4.1 desktop navbar
    ================ */
 
 @media only screen and (min-width: 768px) {
@@ -333,7 +358,7 @@ nav {
 @media only screen and (min-width: 1080px) {
 
   /* ================
-      desktop hero
+    4.2 desktop hero
      ================ */
 
   .container {
@@ -389,7 +414,7 @@ nav {
   }
 
   /* ================
-     desktop features
+    4.3 desktop features
      ================ */
 
   .features-section {
@@ -405,7 +430,7 @@ nav {
   }
 
   /* ================
-   desktop testimonials
+    4.4 desktop testimonials
      ================ */
 
   .testimonials-section ul {
@@ -417,7 +442,7 @@ nav {
   }
 
   /* ================
-     desktop contact
+    4.5 desktop contact
      ================ */
 
   .contact-section {
@@ -440,6 +465,10 @@ nav {
     }
   }
 }
+
+/* ================
+  5. extra features
+   ================ */
 
 @media only screen and (min-width: 1450px) {
   .features-section {
